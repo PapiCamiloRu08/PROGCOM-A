@@ -1,0 +1,40 @@
+import java.util.*; // Importamos para poder hacer el input wu een este caso es el scanner
+
+public class Main {
+    public static void main(String[] args) {
+        // imprimimos qu eppida la edaad
+        System.out.println("hERMANO QU ELA EDAD OMBE: ");
+        
+        Scanner input = new Scanner(System.in); // pedimos el numero mediante scanner que seria como el input 
+        int añitos = input.nextInt();           // Guardamos el número ingresado en la variable 'añitos' y lo ponemos que sea entero con (int)
+        
+        System.out.println("Edad gei: " + añitos);  // Imprimimos el valor almacenado en la variable 'añitos' de una manera bonita
+
+        // 1 If / else
+        // Evaluamos si la edad ingresada es mayor o igual a 18 para determinar si es mayor de edad o menor
+        if (añitos >= 18) { // aew hace su respectiva iperacion de ver si es amyor o igual a 18
+            System.out.println("Con if/else: Mayor de edad, KAJSAKSJAKSJK"); // si es mayor o igual de 18 imprime lo qu eesta en el mensaje
+        } else {
+            System.out.println("Con if/else: menor papito, tan chinche, KAJDKJADKJSKD"); // y si no paila, imprime lo del mensaje 
+        }
+
+        // 2 Operador ternario
+        // Se usa el operador (?:) en una sola línea. 
+        // Si la condición (añitos >= 18) es verdadera, se asigna el mensaje de mayor de edad. de lo contrario, se asigna el de menor oki?.
+        String resultado = (añitos >= 18) ? "Mayor de edad, KAJSAKSJAKSJK" : "menor papito, tan chinche, KAJDKJADKJSKD"; 
+        System.out.println("Con ternario: " + resultado); // Se imprime el resultado almacenado en la variable del resultado
+
+        // 3 Switch (usando la comparacionn indirectata)
+        // Aqui no se puede evaluar directamente >=, asi que transformamos la condición en 1 si es mayor o igual a 18 o 0 si es menor.
+        switch (añitos >= 18 ? 1 : 0) {
+            case 1:
+                System.out.println("Con switch: Mayor de edad, KAJSAKSJAKSJK"); // Caso mayor de edad
+                break;
+            case 0:
+                System.out.println("Con switch: menor papito, tan chinche, KAJDKJADKJSKD"); // Caso menor de edad
+                break;
+        }
+
+        input.close(); // cerrmos el scanner 
+    }
+}
