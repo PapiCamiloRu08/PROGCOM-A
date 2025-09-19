@@ -10,3 +10,4 @@ public class chi1 {
         System.out.println("numeritos del 1 al 10 pero ()^2 : " + cuadrados);
     }
 }
+
