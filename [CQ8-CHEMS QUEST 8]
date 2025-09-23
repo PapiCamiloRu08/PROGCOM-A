@@ -1,0 +1,422 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/PapiCamiloRu08/PROGCOM-A/blob/main/%5BCQ8-CHEMS%20QUEST%208%5D\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#1. KeyError\n",
+        "Este error se produce cuando la clave no esta agregada al diccionario"
+      ],
+      "metadata": {
+        "id": "d2oHq1r17zKa"
+      }
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "B-KuR-JhxRgO",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 158
+        },
+        "outputId": "a23fa9b3-b37a-4af8-870d-d8f58c93769e"
+      },
+      "outputs": [
+        {
+          "output_type": "error",
+          "ename": "KeyError",
+          "evalue": "'OLA'",
+          "traceback": [
+            "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+            "\u001b[0;31mKeyError\u001b[0m                                  Traceback (most recent call last)",
+            "\u001b[0;32m/tmp/ipython-input-1364168870.py\u001b[0m in \u001b[0;36m<cell line: 0>\u001b[0;34m()\u001b[0m\n\u001b[1;32m      1\u001b[0m \u001b[0mwewe\u001b[0m\u001b[0;34m=\u001b[0m\u001b[0;34m{\u001b[0m\u001b[0;34m\"aÑO\"\u001b[0m\u001b[0;34m:\u001b[0m \u001b[0;36m20\u001b[0m \u001b[0;34m,\u001b[0m\u001b[0;34m\"OLO\"\u001b[0m\u001b[0;34m:\u001b[0m \u001b[0;36m70\u001b[0m\u001b[0;34m}\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m----> 2\u001b[0;31m \u001b[0mprint\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mwewe\u001b[0m\u001b[0;34m[\u001b[0m\u001b[0;34m\"OLA\"\u001b[0m\u001b[0;34m]\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m",
+            "\u001b[0;31mKeyError\u001b[0m: 'OLA'"
+          ]
+        }
+      ],
+      "source": [
+        "wewe={\"aÑO\": 20 ,\"OLO\": 70}\n",
+        "print(wewe[\"OLA\"])"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "wewe={\"OLU\": 20 ,\"FEO\": 70}\n",
+        "print(wewe.get(\"aÑO\",\"no hay\"))"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "npvvYFaI-Lmf",
+        "outputId": "efcbb850-4e41-4e3e-f3cc-80dd582d4b66"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "no hay\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#2. IndexError\n",
+        "El error de indexsacion, un vlor fuera de lista"
+      ],
+      "metadata": {
+        "id": "U7phxme0-c70"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "n = [1,2,3,4]\n",
+        "print(n[6])"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 158
+        },
+        "id": "8aJ6xcl3-hnD",
+        "outputId": "5fa16338-4873-46b8-b78b-f4b097438d79"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "error",
+          "ename": "IndexError",
+          "evalue": "list index out of range",
+          "traceback": [
+            "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+            "\u001b[0;31mIndexError\u001b[0m                                Traceback (most recent call last)",
+            "\u001b[0;32m/tmp/ipython-input-2207141461.py\u001b[0m in \u001b[0;36m<cell line: 0>\u001b[0;34m()\u001b[0m\n\u001b[1;32m      1\u001b[0m \u001b[0mn\u001b[0m \u001b[0;34m=\u001b[0m \u001b[0;34m[\u001b[0m\u001b[0;36m1\u001b[0m\u001b[0;34m,\u001b[0m\u001b[0;36m2\u001b[0m\u001b[0;34m,\u001b[0m\u001b[0;36m3\u001b[0m\u001b[0;34m,\u001b[0m\u001b[0;36m4\u001b[0m\u001b[0;34m]\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m----> 2\u001b[0;31m \u001b[0mprint\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mn\u001b[0m\u001b[0;34m[\u001b[0m\u001b[0;36m6\u001b[0m\u001b[0;34m]\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m",
+            "\u001b[0;31mIndexError\u001b[0m: list index out of range"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "n = [1,2,3,4]\n",
+        "if len(n) > 6:\n",
+        "  print(n[6])\n",
+        "else:\n",
+        "  print(\"no esta en la lista\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "sNqtlNua-w5J",
+        "outputId": "32934492-bdf6-498b-b6c4-255a5f32decc"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "no esta en la lista\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#3.TypeError\n",
+        "El error se produce cuando se usa incorrectamente la integración de variables en un str"
+      ],
+      "metadata": {
+        "id": "2DjvYfGR_Ogb"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "panes = 5\n",
+        "print(\"tengo\" + cantidad + \"panes\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 158
+        },
+        "id": "2wAhcH6G_Nd8",
+        "outputId": "bb7431e8-19d0-4e7b-b73e-db5c4975c5bc"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "error",
+          "ename": "TypeError",
+          "evalue": "can only concatenate str (not \"int\") to str",
+          "traceback": [
+            "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+            "\u001b[0;31mTypeError\u001b[0m                                 Traceback (most recent call last)",
+            "\u001b[0;32m/tmp/ipython-input-231223683.py\u001b[0m in \u001b[0;36m<cell line: 0>\u001b[0;34m()\u001b[0m\n\u001b[1;32m      1\u001b[0m \u001b[0medad\u001b[0m \u001b[0;34m=\u001b[0m \u001b[0;36m25\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m----> 2\u001b[0;31m \u001b[0mprint\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34m\"tengo\"\u001b[0m \u001b[0;34m+\u001b[0m \u001b[0medad\u001b[0m \u001b[0;34m+\u001b[0m \u001b[0;34m\"años\"\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m",
+            "\u001b[0;31mTypeError\u001b[0m: can only concatenate str (not \"int\") to str"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "cantidad = 5\n",
+        "print(f\"tengo {cantidad} panes\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "BJyW1Dz5_ik2",
+        "outputId": "fbd5e91e-7f6a-4048-d1ca-11422847f8e5"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "tengo 5 panes\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#4.NameError\n",
+        "El error sale cuando no esta deifnida la variable, o esta mal escrita"
+      ],
+      "metadata": {
+        "id": "tVILiqwq_pmK"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "print(v)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 141
+        },
+        "id": "o-k-qIUJ_xjC",
+        "outputId": "9dae6051-b2fc-4d06-bb75-a0110c9f37ca"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "error",
+          "ename": "NameError",
+          "evalue": "name 'v' is not defined",
+          "traceback": [
+            "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+            "\u001b[0;31mNameError\u001b[0m                                 Traceback (most recent call last)",
+            "\u001b[0;32m/tmp/ipython-input-1609929102.py\u001b[0m in \u001b[0;36m<cell line: 0>\u001b[0;34m()\u001b[0m\n\u001b[0;32m----> 1\u001b[0;31m \u001b[0mprint\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mv\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m",
+            "\u001b[0;31mNameError\u001b[0m: name 'v' is not defined"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "v=\"d\"\n",
+        "print(v)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "ccMtyPyK_0Cs",
+        "outputId": "a8ef00d8-ac4d-4992-f72d-8f600441d09d"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "d\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#5 IndentationError\n",
+        "El error se produco cuando no se deja la identación despues del (:)"
+      ],
+      "metadata": {
+        "id": "xhGS8wxZ_6Wz"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def nokas():\n",
+        "print(\"no señor\")\n",
+        "nokas()"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 106
+        },
+        "id": "5dKgm_OM_6Bm",
+        "outputId": "c50db629-70d9-4de5-9622-3a9c883390e1"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "error",
+          "ename": "IndentationError",
+          "evalue": "expected an indented block after function definition on line 1 (ipython-input-1793254057.py, line 2)",
+          "traceback": [
+            "\u001b[0;36m  File \u001b[0;32m\"/tmp/ipython-input-1793254057.py\"\u001b[0;36m, line \u001b[0;32m2\u001b[0m\n\u001b[0;31m    print(\"no señor\")\u001b[0m\n\u001b[0m    ^\u001b[0m\n\u001b[0;31mIndentationError\u001b[0m\u001b[0;31m:\u001b[0m expected an indented block after function definition on line 1\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def nokas():\n",
+        "  print(\"no señor\")\n",
+        "nokas()"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "kjfcSIM5ADIR",
+        "outputId": "f8e87c2d-b678-4324-b43a-ac8ca6cf81e6"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "no señor\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#6. ZeroDivisionError"
+      ],
+      "metadata": {
+        "id": "MaseXeEs1gF_"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "x=0\n",
+        "b=8\n",
+        "print(b/x)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 176
+        },
+        "id": "4gjATEEH1ccZ",
+        "outputId": "b5fb6e75-cf1f-4be4-e7f3-f3d4a659ade9"
+      },
+      "execution_count": 3,
+      "outputs": [
+        {
+          "output_type": "error",
+          "ename": "ZeroDivisionError",
+          "evalue": "division by zero",
+          "traceback": [
+            "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+            "\u001b[0;31mZeroDivisionError\u001b[0m                         Traceback (most recent call last)",
+            "\u001b[0;32m/tmp/ipython-input-741387052.py\u001b[0m in \u001b[0;36m<cell line: 0>\u001b[0;34m()\u001b[0m\n\u001b[1;32m      1\u001b[0m \u001b[0mx\u001b[0m\u001b[0;34m=\u001b[0m\u001b[0;36m0\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m      2\u001b[0m \u001b[0mb\u001b[0m\u001b[0;34m=\u001b[0m\u001b[0;36m8\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m----> 3\u001b[0;31m \u001b[0mprint\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mb\u001b[0m\u001b[0;34m/\u001b[0m\u001b[0mx\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m",
+            "\u001b[0;31mZeroDivisionError\u001b[0m: division by zero"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#7. ValueError"
+      ],
+      "metadata": {
+        "id": "QEUqDlKm1-UQ"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "texto = \"abc\"\n",
+        "numero = int(texto)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 158
+        },
+        "id": "oEsM4BPj1-B6",
+        "outputId": "4fa5aebf-9da1-4d9d-ba6d-752a5b07921f"
+      },
+      "execution_count": 4,
+      "outputs": [
+        {
+          "output_type": "error",
+          "ename": "ValueError",
+          "evalue": "invalid literal for int() with base 10: 'abc'",
+          "traceback": [
+            "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+            "\u001b[0;31mValueError\u001b[0m                                Traceback (most recent call last)",
+            "\u001b[0;32m/tmp/ipython-input-3000721276.py\u001b[0m in \u001b[0;36m<cell line: 0>\u001b[0;34m()\u001b[0m\n\u001b[1;32m      1\u001b[0m \u001b[0mtexto\u001b[0m \u001b[0;34m=\u001b[0m \u001b[0;34m\"abc\"\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m----> 2\u001b[0;31m \u001b[0mnumero\u001b[0m \u001b[0;34m=\u001b[0m \u001b[0mint\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mtexto\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m",
+            "\u001b[0;31mValueError\u001b[0m: invalid literal for int() with base 10: 'abc'"
+          ]
+        }
+      ]
+    }
+  ]
+}
