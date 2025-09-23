@@ -1,0 +1,67 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyN30PH9xlZQ+HJt5N2YbizI",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/PapiCamiloRu08/PROGCOM-A/blob/main/%5BGP1%20-%20GOOD%20PROGAMMER%201%5D\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "Xms1pyQG7DaU"
+      },
+      "outputs": [],
+      "source": [
+        "import tkinter as tk\n",
+        "import random\n",
+        "\n",
+        "def jugar(opcion_usuario):\n",
+        "    opciones = [\"Piedra\", \"Papel\", \"Tijera\", \"Lagarto\", \"Spock\"]\n",
+        "    cpu = random.choice(opciones)\n",
+        "    reglas = {\n",
+        "        \"Piedra\": [\"Tijera\", \"Lagarto\"],\n",
+        "        \"Papel\": [\"Piedra\", \"Spock\"],\n",
+        "        \"Tijera\": [\"Papel\", \"Lagarto\"],\n",
+        "        \"Lagarto\": [\"Spock\", \"Piedra\"],\n",
+        "        \"Spock\": [\"Tijera\", \"Papel\"]\n",
+        "    }\n",
+        "\n",
+        "    if opcion_usuario == cpu:\n",
+        "        resultado.set(f\"¡Empate! Ambos eligieron {opcion_usuario}\")\n",
+        "    elif cpu in reglas[opcion_usuario]:\n",
+        "        resultado.set(f\"¡Ganaste! {opcion_usuario} vence a {cpu}\")\n",
+        "    else:\n",
+        "        resultado.set(f\"¡Perdiste! {cpu} vence a {opcion_usuario}\")\n",
+        "\n",
+        "\n",
+        "juego = tk.Tk()\n",
+        "juego.title(\"Piedra, Papel, Tijera, Lagarto, Spock\")\n",
+        "\n",
+        "resultado = tk.StringVar()\n",
+        "resultado.set(\"Elige\n"
+      ]
+    }
+  ]
+}
